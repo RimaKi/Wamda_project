@@ -26,7 +26,29 @@ class GroupSeeder extends Seeder
                 'subject' => 'رياضيات',
                 'title' => "مقارنة الأعداد ضمن العدد 20",
                 'minimumMark' => 80
-            ]
+            ],
+            [
+                'subject' => 'رياضيات',
+                'title' => "ترتيب الأعداد",
+                'minimumMark' => 80
+            ],
+
+            [
+                'subject' => 'رياضيات',
+                'title' => "عد الأعداد من 1-100",
+                'minimumMark' => 100
+            ],
+            [
+                'subject' => 'رياضيات',
+                'title' => "جمع الاعداد",
+                'minimumMark' => 80
+            ],
+            [
+                'subject' => 'رياضيات',
+                'title' => "طرح الاعداد",
+                'minimumMark' => 80
+            ],
+
         ];
     }
 }
