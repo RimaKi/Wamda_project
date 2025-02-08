@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Group;
 use Illuminate\Database\Seeder;
 
 class GroupSeeder extends Seeder
@@ -50,5 +51,8 @@ class GroupSeeder extends Seeder
             ],
 
         ];
+        foreach ($groups as $group){
+            Group::create($group);
+        }
     }
 }
