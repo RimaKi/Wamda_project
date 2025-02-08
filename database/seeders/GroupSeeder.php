@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Group;
 use Illuminate\Database\Seeder;
 
 class GroupSeeder extends Seeder
@@ -28,5 +29,8 @@ class GroupSeeder extends Seeder
                 'minimumMark' => 80
             ]
         ];
+        foreach ($groups as $group){
+            Group::create($group);
+        }
     }
 }
