@@ -17,7 +17,7 @@ class MathSeeder extends Seeder
             [
                 // الطالب يبعث رقم الأشكال
                 'groupId' => Group::where('title', 'قراءة وكتابة الأعداد ضمن العدد 20'),
-                'type' => 'عرض أشكال و إدخال',
+                'typeَQuestion' => 'عرض أشكال و إدخال',
                 'text' => "أعد الأشكال التالية",
                 "answer" => 5,
                 "mark" => 10
