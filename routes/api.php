@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChildrenController;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,5 +15,6 @@ Route::middleware("auth:sanctum")->group(function () {
     Route::get("/getExpert", [UserController::class, "getExpert"]);
 
     Route::apiResource('/children', ChildrenController::class)->only('store', 'show');
+    Route::apiResource('/test', TestController::class)->only('index');
 
 });

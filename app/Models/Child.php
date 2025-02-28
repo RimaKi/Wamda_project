@@ -23,4 +23,7 @@ class Child extends Model
     {
         return $this->belongsTo(User::class, 'parentId', '_id');
     }
+    public function result(){
+        return $this->hasMany(Result::class,"childrenId","_id");
+    }
 }

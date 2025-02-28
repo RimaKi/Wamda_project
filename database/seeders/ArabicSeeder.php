@@ -328,16 +328,19 @@ class ArabicSeeder extends Seeder
                     [
                         "sentence" => " عَادَ عُمَرُ مِنَ الْمَدْرَسَةِ سَعِيداً.",
                         "typeَQuestion" => "قراءة",
+                        "typeAnswer" => "تسجيل صوت",
                         "mark" => 10
                     ],
                     [
                         "sentence" => "  قَالَ عُمَرُ : الْيَوْمَ بَدَأَ أُسْبُوعُ الْمُرورِ .",
                         "typeَQuestion" => "قراءة",
+                        "typeAnswer" => "تسجيل صوت",
                         "mark" => 10
                     ],
                     [
                         "sentence" => " أَقِفٌ عِنْدَ خَطِّ الْمُشَاةِ.",
                         "typeَQuestion" => "قراءة",
+                        "typeAnswer" => "تسجيل صوت",
                         "mark" => 10
                     ],
                 ],
