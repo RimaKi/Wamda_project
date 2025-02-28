@@ -15,14 +15,11 @@ class TestController extends Controller
      */
     public function index(FilterRequest $request)
     {
-
-
         $groups=Group::with("questions.branchesQuestion");
        if($request->has("title")){
             $groups=$groups->where("title","=",$request->title);
         }
-//        return $groups;
-        return self::success((TestResource::collection($groups->get()))) ;
+        return self::success(TestResource::collection($groups->get())) ;
     }
     public function getGroups(){
         return Group::all()->groupBy("subject");
