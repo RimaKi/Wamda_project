@@ -18,7 +18,9 @@ class DatabaseSeeder extends Seeder
     $this->call([
         UserSeeder::class,
         GroupArabicSeeder::class,
-        ArabicSeeder::class
+        ArabicSeeder::class,
+        GroupMathSeeder::class,
+        MathSeeder::class
     ]);
     }
 }

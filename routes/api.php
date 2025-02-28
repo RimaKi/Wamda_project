@@ -16,5 +16,6 @@ Route::middleware("auth:sanctum")->group(function () {
 
     Route::apiResource('/children', ChildrenController::class)->only('store', 'show');
     Route::apiResource('/test', TestController::class)->only('index');
+    Route::get('/groups', [TestController::class,"getGroups"]);
 
 });

@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\Group;
 use Illuminate\Database\Seeder;
 
-class GroupSeeder extends Seeder
+class GroupMathSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -36,7 +36,7 @@ class GroupSeeder extends Seeder
 
             [
                 'subject' => 'رياضيات',
-                'title' => "عد الأعداد من 1-100",
+                'title' => "عد الأعداد",
                 'minimumMark' => 100
             ],
             [
