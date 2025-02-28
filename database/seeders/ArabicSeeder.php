@@ -109,6 +109,7 @@ class ArabicSeeder extends Seeder
                         "options" => ["الواسعة", "المطهرة"],
                         "answer" => "المطهرة",
                         "typeَQuestion" => "اختيار",
+                        "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
@@ -116,6 +117,7 @@ class ArabicSeeder extends Seeder
                         "options" => ["ِمثال", "ُمَساَعَدة"],
                         "answer" => "ِمثال",
                         "typeَQuestion" => "اختيار",
+                        "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
@@ -123,6 +125,7 @@ class ArabicSeeder extends Seeder
                         "options" => ["ُ أَعاِلج", "أَسابق"],
                         "answer" => "أَعاِلج",
                         "typeَQuestion" => "اختيار",
+                        "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
@@ -130,6 +133,7 @@ class ArabicSeeder extends Seeder
                         "options" => ["ُيثبت", "يتحرك"],
                         "answer" => "يتحرك",
                         "typeَQuestion" => "اختيار",
+                        "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
@@ -137,6 +141,7 @@ class ArabicSeeder extends Seeder
                         "options" => ["يزرعني", "يحصدني"],
                         "answer" => "يزرعني",
                         "typeَQuestion" => "اختيار",
+                        "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                 ]
@@ -151,6 +156,7 @@ class ArabicSeeder extends Seeder
                         "options" => ["وُلِد", "كبر"],
                         "answer" => "وُلِد",
                         "typeَQuestion" => "اختيار",
+                        "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
@@ -158,6 +164,7 @@ class ArabicSeeder extends Seeder
                         "options" => ["يَكْبر", "يتوقف"],
                         "answer" => "يَكْبر",
                         "typeَQuestion" => "اختيار",
+                        "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
@@ -165,6 +172,7 @@ class ArabicSeeder extends Seeder
                         "options" => ["فكرةٌ جيدةٌ", "فكرةٌ قبيحةٌ"],
                         "answer" => "فكرةٌ قبيحةٌ",
                         "typeَQuestion" => "اختيار",
+                        "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
@@ -172,6 +180,7 @@ class ArabicSeeder extends Seeder
                         "options" => ["تتمشى", "تتوقف"],
                         "answer" => "تتوقف",
                         "typeَQuestion" => "اختيار",
+                        "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
@@ -179,6 +188,7 @@ class ArabicSeeder extends Seeder
                         "options" => ["القديمة", "الجديدة"],
                         "answer" => "القديمة",
                         "typeَQuestion" => "اختيار",
+                        "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                 ]
@@ -328,19 +338,19 @@ class ArabicSeeder extends Seeder
                     [
                         "sentence" => " عَادَ عُمَرُ مِنَ الْمَدْرَسَةِ سَعِيداً.",
                         "typeَQuestion" => "قراءة",
-                        "typeAnswer" => "تسجيل صوت",
+                        "typeAnswer" => "صوت",
                         "mark" => 10
                     ],
                     [
                         "sentence" => "  قَالَ عُمَرُ : الْيَوْمَ بَدَأَ أُسْبُوعُ الْمُرورِ .",
                         "typeَQuestion" => "قراءة",
-                        "typeAnswer" => "تسجيل صوت",
+                        "typeAnswer" => "صوت",
                         "mark" => 10
                     ],
                     [
                         "sentence" => " أَقِفٌ عِنْدَ خَطِّ الْمُشَاةِ.",
                         "typeَQuestion" => "قراءة",
-                        "typeAnswer" => "تسجيل صوت",
+                        "typeAnswer" => "صوت",
                         "mark" => 10
                     ],
                 ],
@@ -353,25 +363,30 @@ class ArabicSeeder extends Seeder
                     [
                         "sentence" => "فَرِحَت الشَّجَرَة",
                         "typeَQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
                         "mark" => 20
                     ],
                     [
                         "sentence" => "العَسَلُ فِيه شَفَاء",
                         "typeَQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
                         "mark" => 20
                     ],
                     [
                         "sentence" => "الحَلِيب مُفِيذ",
                         "typeَQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
                         "mark" => 20
                     ],
                     [
                         "sentence" => "قَلَّدَ الغُرَابُ النَّسْر",
                         "typeَQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
                         "mark" => 20
                     ],  [
                         "sentence" => "َالحَياةُ جَميلةٌ",
                         "typeَQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
                         "mark" => 20
                     ],
                 ]
