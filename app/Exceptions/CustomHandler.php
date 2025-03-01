@@ -34,7 +34,7 @@ abstract class CustomHandler
                 $code = 403;
             }
             if ($e instanceof ValidationException) {
-                $message = $e->errors();
+                $message = $e->getMessage();
             }
             $extra = [];
             if (env("APP_DEBUG",false)) {
