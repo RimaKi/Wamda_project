@@ -15,7 +15,7 @@ Route::middleware("auth:sanctum")->group(function () {
     Route::get("/profile", [UserController::class, "profile"]);
     Route::get("/getExpert", [UserController::class, "getExpert"]);
 
-    Route::apiResource('/children', ChildrenController::class)->only('store', 'show');
+    Route::apiResource('/children', ChildrenController::class)->only('store', 'show','index');
     Route::apiResource('/test', TestController::class)->only('index');
     Route::get('/groups', [TestController::class,"getGroups"]);
 

@@ -16,6 +16,11 @@ class ChildrenController extends Controller
         return self::success(null, 'added successfully', 200);
     }
 
+    public function index(){
+        $children = auth()->user()->children;
+        return self::success(ChildResource::collection($children));
+    }
+
     public function show(Child $child)
     {
         return self::success(new ChildResource($child));
