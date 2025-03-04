@@ -22,80 +22,80 @@ class ArabicSeeder extends Seeder
                         "word" => "م",
                         "options" => ["مـشعل", "عـمـر", "علـم", "أقالم", "نحـن", "فـرحة"],
                         "answer" => ["مـشعل", "عـمـر", "علـم", "أقالم"],
-                        "typeَQuestion" => "توصيل",
-                        "typeَAnswer" => "توصيل بشكل عشوائي",
+                        "typeQuestion" => "توصيل",
+                        "typeAnswer" => "توصيل بشكل عشوائي",
                         "mark" => 10
                     ],
                     [
                         "word" => "ب",
                         "options" => ["بـلادي", "مكتـبـة", "كتـب", "حاسوب", "نـافـذة", "قفـص"],
                         "answer" => ["بـلادي", "مكتـبـة", "كتـب", "حاسوب"],
-                        "typeَQuestion" => "توصيل",
-                        "typeَAnswer" => "توصيل بشكل عشوائي",
+                        "typeQuestion" => "توصيل",
+                        "typeAnswer" => "توصيل بشكل عشوائي",
                         "mark" => 10
                     ],
                     [
                         "word" => "د",
                         "options" => ["دفتر", "جريـدة", "أسـد", "ورد", "نـافـذة", "قفـص"],
                         "answer" => ["دفتر", "جريـدة", "أسـد", "ورد"],
-                        "typeَQuestion" => "توصيل",
-                        "typeَAnswer" => "توصيل بشكل عشوائي",
+                        "typeQuestion" => "توصيل",
+                        "typeAnswer" => "توصيل بشكل عشوائي",
                         "mark" => 10
                     ],
                     [
                         "word" => "ت",
                         "options" => ["تـمر", "بيـتـنا", "لعبـت", "توت", "صـقر", "قفـص"],
                         "answer" => ["تـمر", "بيـتـنا", "لعبـت", "توت"],
-                        "typeَQuestion" => "توصيل",
-                        "typeَAnswer" => "توصيل بشكل عشوائي",
+                        "typeQuestion" => "توصيل",
+                        "typeAnswer" => "توصيل بشكل عشوائي",
                         "mark" => 10
                     ],
                     [
                         "word" => "س",
                         "options" => ["سـور", "نـسـر", "تكنـس", "حارس", "صـقر", "بيـتـنا"],
                         "answer" => ["سـور", "نـسـر", "تكنـس", "حارس"],
-                        "typeَQuestion" => "توصيل",
-                        "typeَAnswer" => "توصيل بشكل عشوائي",
+                        "typeQuestion" => "توصيل",
+                        "typeAnswer" => "توصيل بشكل عشوائي",
                         "mark" => 10
                     ],
                     [
                         "word" => "ح",
                         "options" => ["حـمل", "لـحـق", "مسبـح", "فرح", "صـقر", "بيـتـنا"],
                         "answer" => ["حـمل", "لـحـق", "مسبـح", "فرح"],
-                        "typeَQuestion" => "توصيل",
-                        "typeَAnswer" => "توصيل بشكل عشوائي",
+                        "typeQuestion" => "توصيل",
+                        "typeAnswer" => "توصيل بشكل عشوائي",
                         "mark" => 10
                     ],
                     [
                         "word" => "ك",
                         "options" => ["كـرة", "يبـكـي", "أمسـك", "أعدك", "غـزال", "بيـتـنا"],
                         "answer" => ["كـرة", "يبـكـي", "أمسـك", "أعدك"],
-                        "typeَQuestion" => "توصيل",
-                        "typeَAnswer" => "توصيل بشكل عشوائي",
+                        "typeQuestion" => "توصيل",
+                        "typeAnswer" => "توصيل بشكل عشوائي",
                         "mark" => 10
                     ],
                     [
                         "word" => "ع",
                         "options" => ["عـمر", "سـعـيد", "واسـع", "أسبوع", "غـزال", "بيـتـنا"],
                         "answer" => ["عـمر", "سـعـيد", "واسـع", "أسبوع"],
-                        "typeَQuestion" => "توصيل",
-                        "typeَAnswer" => "توصيل بشكل عشوائي",
+                        "typeQuestion" => "توصيل",
+                        "typeAnswer" => "توصيل بشكل عشوائي",
                         "mark" => 10
                     ],
                     [
                         "word" => "ظ",
                         "options" => ["ظـالم", "مـظـلة", "يحافـظ", "محفوظ", "كـثـير", "بـخـور"],
-                        "answer" => ["عـمر", "سـعـيد", "واسـع", "أسبوع"],
-                        "typeَQuestion" => "توصيل",
-                        "typeَAnswer" => "توصيل بشكل عشوائي",
+                        "answer" => ["ظـالم", "مـظـلة", "يحافـظ", "محفوظ"],
+                        "typeQuestion" => "توصيل",
+                        "typeAnswer" => "توصيل بشكل عشوائي",
                         "mark" => 10
                     ],
                     [
                         "word" => "ي",
                         "options" => ["يـحب", "تـيـن", "كرسـي", "النادي", "هـواء", "بـخـور"],
                         "answer" => ["يـحب", "تـيـن", "كرسـي", "النادي"],
-                        "typeَQuestion" => "توصيل",
-                        "typeَAnswer" => "توصيل بشكل عشوائي",
+                        "typeQuestion" => "توصيل",
+                        "typeAnswer" => "توصيل بشكل عشوائي",
                         "mark" => 10
                     ],
                 ]
@@ -108,7 +108,7 @@ class ArabicSeeder extends Seeder
                         "word" => "المقدَسة",
                         "options" => ["الواسعة", "المطهرة"],
                         "answer" => "المطهرة",
-                        "typeَQuestion" => "اختيار",
+                        "typeQuestion" => "اختيار",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -116,7 +116,7 @@ class ArabicSeeder extends Seeder
                         "word" => "ْقدَوة",
                         "options" => ["ِمثال", "ُمَساَعَدة"],
                         "answer" => "ِمثال",
-                        "typeَQuestion" => "اختيار",
+                        "typeQuestion" => "اختيار",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -124,7 +124,7 @@ class ArabicSeeder extends Seeder
                         "word" => "ُ أْسِعف",
                         "options" => ["ُ أَعاِلج", "أَسابق"],
                         "answer" => "أَعاِلج",
-                        "typeَQuestion" => "اختيار",
+                        "typeQuestion" => "اختيار",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -132,7 +132,7 @@ class ArabicSeeder extends Seeder
                         "word" => "ُيتزحزح",
                         "options" => ["ُيثبت", "يتحرك"],
                         "answer" => "يتحرك",
-                        "typeَQuestion" => "اختيار",
+                        "typeQuestion" => "اختيار",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -140,7 +140,7 @@ class ArabicSeeder extends Seeder
                         "word" => "يبذرني",
                         "options" => ["يزرعني", "يحصدني"],
                         "answer" => "يزرعني",
-                        "typeَQuestion" => "اختيار",
+                        "typeQuestion" => "اختيار",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -155,7 +155,7 @@ class ArabicSeeder extends Seeder
                         "word" => "توفي",
                         "options" => ["وُلِد", "كبر"],
                         "answer" => "وُلِد",
-                        "typeَQuestion" => "اختيار",
+                        "typeQuestion" => "اختيار",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -163,7 +163,7 @@ class ArabicSeeder extends Seeder
                         "word" => "َ يْنُمو",
                         "options" => ["يَكْبر", "يتوقف"],
                         "answer" => "يَكْبر",
-                        "typeَQuestion" => "اختيار",
+                        "typeQuestion" => "اختيار",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -171,7 +171,7 @@ class ArabicSeeder extends Seeder
                         "word" => "َفكرةٌ رائعةٌ",
                         "options" => ["فكرةٌ جيدةٌ", "فكرةٌ قبيحةٌ"],
                         "answer" => "فكرةٌ قبيحةٌ",
-                        "typeَQuestion" => "اختيار",
+                        "typeQuestion" => "اختيار",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -179,7 +179,7 @@ class ArabicSeeder extends Seeder
                         "word" => "َتتجول",
                         "options" => ["تتمشى", "تتوقف"],
                         "answer" => "تتوقف",
-                        "typeَQuestion" => "اختيار",
+                        "typeQuestion" => "اختيار",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -187,7 +187,7 @@ class ArabicSeeder extends Seeder
                         "word" => "الحديثة",
                         "options" => ["القديمة", "الجديدة"],
                         "answer" => "القديمة",
-                        "typeَQuestion" => "اختيار",
+                        "typeQuestion" => "اختيار",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -199,35 +199,35 @@ class ArabicSeeder extends Seeder
                     [
                         "words" => ["المكرمة", "في", "المسجد", "مكة", "الحرام,"],
                         "answer" => "المسجد الحرام في مكة المكرمة",
-                        "typeَQuestion" => "ترتيب",
+                        "typeQuestion" => "ترتيب",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
                         "words" => ["البر", "الصدق", "إلى", "يهدي"],
                         "answer" => "الصدق يهدي إلى البر",
-                        "typeَQuestion" => "ترتيب",
+                        "typeQuestion" => "ترتيب",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
                         "words" => ["عن", "الأذى", "الطريق", "صدقة", "إماطة"],
                         "answer" => "إماطة الأذى عن الطريق صدقة",
-                        "typeَQuestion" => "ترتيب",
+                        "typeQuestion" => "ترتيب",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
                         "words" => ["عن", "غابت", "المدرسة", "وفاء"],
                         "answer" => "غابت وفاء عن المدرسة",
-                        "typeَQuestion" => "ترتيب",
+                        "typeQuestion" => "ترتيب",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
                     [
                         "words" => ["الجد", "طاعة", "واجبة"],
                         "answer" => "طاعة الجد واجبة",
-                        "typeَQuestion" => "ترتيب",
+                        "typeQuestion" => "ترتيب",
                         "typeAnswer" => "نص",
                         "mark" => 10
                     ],
@@ -241,7 +241,7 @@ class ArabicSeeder extends Seeder
                         "sentence" => "ابتعد الخروف عن القطيع",
                         "options" => ["ابتعد", "الخروف", "عن", "القطيع", "شمس", "رماد"],
                         "answer" => ["ابتعد", "الخروف", "عن", "القطيع"],
-                        "typeَQuestion" => "تحليل",
+                        "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
@@ -249,7 +249,7 @@ class ArabicSeeder extends Seeder
                         "sentence" => "شاَهد الغراب الصغير نسرا",
                         "options" => ["شاَهد", "الغراب", "الصغير", "نسرا", "سم", "سمسم"],
                         "answer" => ["شاَهد", "الغراب", "الصغير", "نسرا"],
-                        "typeَQuestion" => "تحليل",
+                        "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
@@ -257,7 +257,7 @@ class ArabicSeeder extends Seeder
                         "sentence" => "زارت المعلمة أم أحلام",
                         "options" => ["زارت", "المعلمة", "أم", "أحلام", "حياة", "وردة"],
                         "answer" => ["زارت", "المعلمة", "أم", "أحلام"],
-                        "typeَQuestion" => "تحليل",
+                        "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
@@ -271,7 +271,7 @@ class ArabicSeeder extends Seeder
                         "sentence" => "َجِديَدة",
                         "options" => ["جِـ", "َديـ", "د", "ة", "ق", "ثق"],
                         "answer" => ["جِـ", "َديـ", "د", "ة"],
-                        "typeَQuestion" => "تحليل",
+                        "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
@@ -279,7 +279,7 @@ class ArabicSeeder extends Seeder
                         "sentence" => "مَتْجَرٌ",
                         "options" => ["مَتْـ", "جـ", "ٌَر", "لا", "سي"],
                         "answer" => ["مَتْـ", "جـ", "ٌَر"],
-                        "typeَQuestion" => "تحليل",
+                        "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
@@ -287,7 +287,7 @@ class ArabicSeeder extends Seeder
                         "sentence" => "صندوق",
                         "options" => ["صنـ", "دو", "ق", "رلا", "وز"],
                         "answer" => ["صنـ", "دو", "ق"],
-                        "typeَQuestion" => "تحليل",
+                        "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
@@ -301,7 +301,7 @@ class ArabicSeeder extends Seeder
                         "sentence" => "َيْلَـ",
                         "options" => ["يـْ", "لـَ", "لا", "ري"],
                         "answer" => ["يـْ", "لـَ"],
-                        "typeَQuestion" => "تحليل",
+                        "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
@@ -309,7 +309,7 @@ class ArabicSeeder extends Seeder
                         "sentence" => "هُو",
                         "options" => ["هـُ", "و", "سؤ", "ش"],
                         "answer" => ["هـُ", "و"],
-                        "typeَQuestion" => "تحليل",
+                        "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
@@ -317,7 +317,7 @@ class ArabicSeeder extends Seeder
                         "sentence" => "تِمْـ",
                         "options" => ["تـِ", "مـ","ص","في"],
                         "answer" => ["تـِ", "مـ"],
-                        "typeَQuestion" => "تحليل",
+                        "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
@@ -325,7 +325,7 @@ class ArabicSeeder extends Seeder
                         "sentence" => "غِيـ",
                         "options" => ["غـِ", "يـ","لب","لس"],
                         "answer" => ["غـِ", "يـ"],
-                        "typeَQuestion" => "تحليل",
+                        "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
@@ -337,19 +337,19 @@ class ArabicSeeder extends Seeder
                 "branchQuestion" => [
                     [
                         "sentence" => " عَادَ عُمَرُ مِنَ الْمَدْرَسَةِ سَعِيداً.",
-                        "typeَQuestion" => "قراءة",
+                        "typeQuestion" => "قراءة",
                         "typeAnswer" => "صوت",
                         "mark" => 10
                     ],
                     [
                         "sentence" => "  قَالَ عُمَرُ : الْيَوْمَ بَدَأَ أُسْبُوعُ الْمُرورِ .",
-                        "typeَQuestion" => "قراءة",
+                        "typeQuestion" => "قراءة",
                         "typeAnswer" => "صوت",
                         "mark" => 10
                     ],
                     [
                         "sentence" => " أَقِفٌ عِنْدَ خَطِّ الْمُشَاةِ.",
-                        "typeَQuestion" => "قراءة",
+                        "typeQuestion" => "قراءة",
                         "typeAnswer" => "صوت",
                         "mark" => 10
                     ],
@@ -362,30 +362,30 @@ class ArabicSeeder extends Seeder
                 "branchQuestion" => [
                     [
                         "sentence" => "فَرِحَت الشَّجَرَة",
-                        "typeَQuestion" => "كتابي",
+                        "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
                         "mark" => 20
                     ],
                     [
                         "sentence" => "العَسَلُ فِيه شَفَاء",
-                        "typeَQuestion" => "كتابي",
+                        "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
                         "mark" => 20
                     ],
                     [
                         "sentence" => "الحَلِيب مُفِيذ",
-                        "typeَQuestion" => "كتابي",
+                        "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
                         "mark" => 20
                     ],
                     [
                         "sentence" => "قَلَّدَ الغُرَابُ النَّسْر",
-                        "typeَQuestion" => "كتابي",
+                        "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
                         "mark" => 20
                     ],  [
                         "sentence" => "َالحَياةُ جَميلةٌ",
-                        "typeَQuestion" => "كتابي",
+                        "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
                         "mark" => 20
                     ],

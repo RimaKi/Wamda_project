@@ -3,19 +3,31 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Result\StoreRequest;
-use App\Models\Question;
+use App\Http\Resources\ResultResource;
 use App\Models\Result;
-use Illuminate\Http\Request;
+use App\Services\ResultService;
 
 class ResultController extends Controller
 {
+    protected $resultService;
+    public function __construct(ResultService $resultService)
+    {
+        $this->resultService=$resultService;
+    }
+
     public function store(StoreRequest $request){
-        $data = $request->validated();
-        $question = Question::where('_id',$data['questionId'])->first();
-        if($question->typeAnswer != 'صوت' || $question->typeAnswer != 'صورة' ){
-            $data['mark']= $question->answer == $data['answer'] ? $question->mark : 0;
-        }
-        Result::create($data);
+        $this->resultService->storeResult($request->validated());
         return self::success();
+    }
+
+    public function update(Result $result,$mark){
+        $result = $this->resultService->updateResult($result,$mark);
+        return self::success(new ResultResource($result));
+    }
+
+    public function resultsForExpert($child){
+        $results = Result::query()->where('childId',$child)
+            ->whereNull('mark')->with('question')->get();
+        return self::success(ResultResource::collection($results));
     }
 }
