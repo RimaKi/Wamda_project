@@ -21,4 +21,8 @@ Route::middleware("auth:sanctum")->group(function () {
 
     Route::post('/results',[ResultController::class,'store']);
 
+    //expert
+    Route::put('/results/{result}/{mark}',[ResultController::class,'update']);
+    Route::get('/results-for-expert/{child}',[ResultController::class,'resultsForExpert']);
+
 });

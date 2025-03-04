@@ -22,9 +22,10 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "questionId"=>['required','exists:questions,_id'],
-            "childrenId"=>['required','exists:children,_id'],
-            "answer"=>['required']
+            "childId"=>['required','exists:children,_id'],
+            "answers"=>['required','array'],
+            "answers.*.questionId"=>['required','exists:questions,_id'],
+            "answers.*.answer"=>['required']
         ];
     }
 }
