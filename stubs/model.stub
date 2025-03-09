@@ -1,0 +1,12 @@
+<?php
+
+namespace {{ namespace }};
+
+{{ factoryImport }}
+use MongoDB\Laravel\Eloquent\Model;;
+
+class {{ class }} extends Model
+{
+    protected $connection = 'mongodb';
+    {{ factory }}
+}
