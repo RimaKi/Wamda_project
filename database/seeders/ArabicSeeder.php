@@ -101,139 +101,6 @@ class ArabicSeeder extends Seeder
                 ]
             ],//حرف
             [
-                "groupId" => Group::where("title", "المعيار اكتشاف دالالت الكلمات الجديدة من خلال الترادف والتضاد")->first()->_id,
-                "text" => "قم بتوصيل الكلمة إلى مرادفها",
-                "branchQuestion" => [
-                    [
-                        "word" => "المقدَسة",
-                        "options" => ["الواسعة", "المطهرة"],
-                        "answer" => "المطهرة",
-                        "typeQuestion" => "اختيار",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "word" => "ْقدَوة",
-                        "options" => ["ِمثال", "ُمَساَعَدة"],
-                        "answer" => "ِمثال",
-                        "typeQuestion" => "اختيار",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "word" => "ُ أْسِعف",
-                        "options" => ["ُ أَعاِلج", "أَسابق"],
-                        "answer" => "أَعاِلج",
-                        "typeQuestion" => "اختيار",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "word" => "ُيتزحزح",
-                        "options" => ["ُيثبت", "يتحرك"],
-                        "answer" => "يتحرك",
-                        "typeQuestion" => "اختيار",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "word" => "يبذرني",
-                        "options" => ["يزرعني", "يحصدني"],
-                        "answer" => "يزرعني",
-                        "typeQuestion" => "اختيار",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                ]
-
-            ],//ترادف
-            [
-                "groupId" => Group::where("title", "المعيار اكتشاف دالالت الكلمات الجديدة من خلال الترادف والتضاد")->first()->_id,
-                "text" => "قم بتوصيل الكلمة إلى بضدها",
-                "branchQuestion" => [
-                    [
-                        "word" => "توفي",
-                        "options" => ["وُلِد", "كبر"],
-                        "answer" => "وُلِد",
-                        "typeQuestion" => "اختيار",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "word" => "َ يْنُمو",
-                        "options" => ["يَكْبر", "يتوقف"],
-                        "answer" => "يَكْبر",
-                        "typeQuestion" => "اختيار",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "word" => "َفكرةٌ رائعةٌ",
-                        "options" => ["فكرةٌ جيدةٌ", "فكرةٌ قبيحةٌ"],
-                        "answer" => "فكرةٌ قبيحةٌ",
-                        "typeQuestion" => "اختيار",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "word" => "َتتجول",
-                        "options" => ["تتمشى", "تتوقف"],
-                        "answer" => "تتوقف",
-                        "typeQuestion" => "اختيار",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "word" => "الحديثة",
-                        "options" => ["القديمة", "الجديدة"],
-                        "answer" => "القديمة",
-                        "typeQuestion" => "اختيار",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                ]
-            ],//تضاد
-            ["groupId" => Group::where("title", "معيار/ترتيب كلمات لبناء جملة مفيدة")->first()->_id,
-                "text" => "قم ترتيب الكلمات إلى جملة مفيدة",
-                "branchQuestion" => [
-                    [
-                        "words" => ["المكرمة", "في", "المسجد", "مكة", "الحرام,"],
-                        "answer" => "المسجد الحرام في مكة المكرمة",
-                        "typeQuestion" => "ترتيب",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "words" => ["البر", "الصدق", "إلى", "يهدي"],
-                        "answer" => "الصدق يهدي إلى البر",
-                        "typeQuestion" => "ترتيب",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "words" => ["عن", "الأذى", "الطريق", "صدقة", "إماطة"],
-                        "answer" => "إماطة الأذى عن الطريق صدقة",
-                        "typeQuestion" => "ترتيب",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "words" => ["عن", "غابت", "المدرسة", "وفاء"],
-                        "answer" => "غابت وفاء عن المدرسة",
-                        "typeQuestion" => "ترتيب",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                    [
-                        "words" => ["الجد", "طاعة", "واجبة"],
-                        "answer" => "طاعة الجد واجبة",
-                        "typeQuestion" => "ترتيب",
-                        "typeAnswer" => "نص",
-                        "mark" => 10
-                    ],
-                ]
-            ],//ترتيب
-            [
                 "groupId" => Group::where("title", "المعيار/تحليل الجمل إلى كلمات والكلمات إلى مقاطع والمقاطع إلى أصوات")->first()->_id,
                 "text" => "قم بتحليل الجمل إلى كلمات ",
                 "branchQuestion" => [
@@ -315,7 +182,7 @@ class ArabicSeeder extends Seeder
                     ],
                     [
                         "sentence" => "تِمْـ",
-                        "options" => ["تـِ", "مـ","ص","في"],
+                        "options" => ["تـِ", "مـ", "ص", "في"],
                         "answer" => ["تـِ", "مـ"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
@@ -323,7 +190,7 @@ class ArabicSeeder extends Seeder
                     ],
                     [
                         "sentence" => "غِيـ",
-                        "options" => ["غـِ", "يـ","لب","لس"],
+                        "options" => ["غـِ", "يـ", "لب", "لس"],
                         "answer" => ["غـِ", "يـ"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
@@ -335,31 +202,33 @@ class ArabicSeeder extends Seeder
                 "groupId" => Group::where("title", "المعيار/قراءة كلمات والنصوص")->first()->_id,
                 "text" => "أقرأ الجمل التالية ",
                 "branchQuestion" => [
+
                     [
                         "sentence" => " عَادَ عُمَرُ مِنَ الْمَدْرَسَةِ سَعِيداً.",
                         "typeQuestion" => "قراءة",
                         "typeAnswer" => "صوت",
-                        "mark" => 10
+                        "mark" => 30
                     ],
                     [
                         "sentence" => "  قَالَ عُمَرُ : الْيَوْمَ بَدَأَ أُسْبُوعُ الْمُرورِ .",
                         "typeQuestion" => "قراءة",
                         "typeAnswer" => "صوت",
-                        "mark" => 10
+                        "mark" => 30
                     ],
                     [
                         "sentence" => " أَقِفٌ عِنْدَ خَطِّ الْمُشَاةِ.",
                         "typeQuestion" => "قراءة",
                         "typeAnswer" => "صوت",
-                        "mark" => 10
+                        "mark" => 40
                     ],
                 ],
 
             ],//قراءة
             [
                 "groupId" => Group::where("title", "المعيار/كتابة جمل مكونة من كلمتين أو ثلث كلمات")->first()->_id,
-                "text" => "أكتب الجمل التالية مع التشكيل ",
+                "text" => "أكتب الجمل أو الكلمات التالية مع التشكيل ",
                 "branchQuestion" => [
+
                     [
                         "sentence" => "فَرِحَت الشَّجَرَة",
                         "typeQuestion" => "كتابي",
@@ -383,15 +252,469 @@ class ArabicSeeder extends Seeder
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
                         "mark" => 20
-                    ],  [
+                    ],
+                    [
                         "sentence" => "َالحَياةُ جَميلةٌ",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 20
+                    ],
+
+                ]
+
+            ],//كتابة جمل مكونة من كلمتين أو ثلث كلمات
+            [
+                "groupId" => Group::where("title", "قراءة كلمات مع الحركة الطويلة والقصيرة")->first()->_id,
+                "text" => "أقرأ الكلمات التالية ",
+                "branchQuestion" => [
+
+                    [
+                        "sentence" => "بَلَد",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "عَادِل",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "عَصِير",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "فُصُول",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "فًرِح",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+
+                ],
+
+            ],//قراءة كلمات مع الحركة الطويلة والقصيرة
+            [
+                "groupId" => Group::where("title", "قراءة كلمات فيها ظواهر لغوية ( ال الشمسية ، والقمرية ، والتضعيف)")->first()->_id,
+                "text" => "أقرأ الكلمات التالية ",
+                "branchQuestion" => [
+                    [
+                        "sentence" => "الْعِنَب",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "التَّمْر",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "نَظَّفَ",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "الْوَرَق",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "الشِّفَاء",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+
+
+                ],
+
+            ],//قراءة كلمات فيها ظواهر لغوية ( ال الشمسية ، والقمرية ، والتضعيف)
+            [
+                "groupId" => Group::where("title", "قراءة كلمات فيها ظواهر لغوية(التاء المربوطة ، والمفتوحة ، والهاء)")->first()->_id,
+                "text" => "أقرأ الكلمات التالية ",
+                "branchQuestion" => [
+                    [
+                        "sentence" => "مَكْتَبَة",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "مِيَاه",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "مِظَلَّةُ",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "جَلَسَت",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "وَجْه",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+
+                ],
+
+            ],//قراءة كلمات فيها ظواهر لغوية(التاء المربوطة ، والمفتوحة ، والهاء)
+            [
+                "groupId" => Group::where("title", "قراءة كلمات فيها ظواهر لغوية( تنوين الفتح ،والضم ،والكسر)")->first()->_id,
+                "text" => "أقرأ الكلمات التالية ",
+                "branchQuestion" => [
+                    [
+                        "sentence" => "طَلَالٌ",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "زُجَاجٍ",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "مُفِيداً",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "مَذْعُوراً",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "غَزَالٍ",
+                        "typeQuestion" => "قراءة",
+                        "typeAnswer" => "صوت",
+                        "mark" => 20
+                    ],
+
+                ],
+
+            ],//قراءة كلمات فيها ظواهر لغوية( تنوين الفتح ،والضم ،والكسر)
+            [
+                "groupId" => Group::where("title", "كتابة كلمات فيها ظواهر لغوية(التاء المربوطة ، والمفتوحة ، والهاء) من الذاكرة القريبة")->first()->_id,
+                "text" => "أكتب الكلمات التالية مع التشكيل ",
+                "branchQuestion" => [
+                    [
+                        "sentence" => "َرِحْلَة",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 5
+                    ],
+                    [
+                        "sentence" => "زَيْت",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 5
+                    ],
+                    [
+                        "sentence" => "أَخَذَه",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 5
+                    ],
+                    [
+                        "sentence" => "بَارَكَت",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 5
+                    ],
+                    [
+                        "sentence" => "صُورَة",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 5
+                    ],
+                ]
+
+            ],//كتابة كلمات فيها ظواهر لغوية )التاء المربوطة ، والمفتوحة ، والهاء( من الذاكرة القريبة.
+            [
+                "groupId" => Group::where("title", "كتابة كلمات فيها ظواهر لغوية( ال الشمسية ، والقمرية ، والتضعيف)")->first()->_id,
+                "text" => "أكتب الكلمات التالية مع التشكيل ",
+                "branchQuestion" => [
+                    [
+                        "sentence" => "الشَّارِع",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "الْغُصْن",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "مُلَوَّث",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "الصَّبَاح",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "الشَّمْس",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 20
+                    ],
+
+                ]
+
+            ],//كتابة كلمات فيها ظواهر لغوية ) ال الشمسية ، والقمرية ، والتضعيف(
+            [
+                "groupId" => Group::where("title", "كتابة كلمات فيها ظواهر لغوية(تنوين الفتح ،والضم ،والكسر)")->first()->_id,
+                "text" => "أكتب الكلمات التالية مع التشكيل ",
+                "branchQuestion" => [
+
+                    [
+                        "sentence" => "ماكرٌ",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 5
+                    ],
+                    [
+                        "sentence" => "ماكرٌ",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 5
+                    ],
+                    [
+                        "sentence" => "مُجْتَمِعَةً",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 5
+                    ],
+                    [
+                        "sentence" => "صبرٍ",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 5
+                    ],
+                    [
+                        "sentence" => "سلامٍ",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 5
+                    ],
+                ]
+
+            ],//كتابة كلمات فيها ظواهر لغوية(تنوين الفتح ،والضم ،والكسر)
+            [
+                "groupId" => Group::where("title", "كتابة كلمات مع الحركة الطويلة والقصيرة")->first()->_id,
+                "text" => "أكتب الكلمات التالية مع التشكيل ",
+                "branchQuestion" => [
+
+                    [
+                        "sentence" => "كِتَّاب",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "نَدِم",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "مَطَر",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "بَدَأَ",
+                        "typeQuestion" => "كتابي",
+                        "typeAnswer" => "صورة",
+                        "mark" => 20
+                    ],
+                    [
+                        "sentence" => "حَضَر",
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
                         "mark" => 20
                     ],
                 ]
 
-            ],//كتابي
+            ],//كتابة كلمات مع الحركة الطويلة والقصيرة
+
+
+
+
+
+
+
+
+
+
+
+
+//            ["groupId" => Group::where("title", "معيار/ترتيب كلمات لبناء جملة مفيدة")->first()->_id,
+//                "text" => "قم ترتيب الكلمات إلى جملة مفيدة",
+//                "branchQuestion" => [
+//                    [
+//                        "words" => ["المكرمة", "في", "المسجد", "مكة", "الحرام,"],
+//                        "answer" => "المسجد الحرام في مكة المكرمة",
+//                        "typeQuestion" => "ترتيب",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "words" => ["البر", "الصدق", "إلى", "يهدي"],
+//                        "answer" => "الصدق يهدي إلى البر",
+//                        "typeQuestion" => "ترتيب",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "words" => ["عن", "الأذى", "الطريق", "صدقة", "إماطة"],
+//                        "answer" => "إماطة الأذى عن الطريق صدقة",
+//                        "typeQuestion" => "ترتيب",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "words" => ["عن", "غابت", "المدرسة", "وفاء"],
+//                        "answer" => "غابت وفاء عن المدرسة",
+//                        "typeQuestion" => "ترتيب",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "words" => ["الجد", "طاعة", "واجبة"],
+//                        "answer" => "طاعة الجد واجبة",
+//                        "typeQuestion" => "ترتيب",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                ]
+//            ],//ترتيب
+
+//            [
+//                "groupId" => Group::where("title", "المعيار اكتشاف دالالت الكلمات الجديدة من خلال الترادف والتضاد")->first()->_id,
+//                "text" => "قم بتوصيل الكلمة إلى مرادفها",
+//                "branchQuestion" => [
+//                    [
+//                        "word" => "المقدَسة",
+//                        "options" => ["الواسعة", "المطهرة"],
+//                        "answer" => "المطهرة",
+//                        "typeQuestion" => "اختيار",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "word" => "ْقدَوة",
+//                        "options" => ["ِمثال", "ُمَساَعَدة"],
+//                        "answer" => "ِمثال",
+//                        "typeQuestion" => "اختيار",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "word" => "ُ أْسِعف",
+//                        "options" => ["ُ أَعاِلج", "أَسابق"],
+//                        "answer" => "أَعاِلج",
+//                        "typeQuestion" => "اختيار",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "word" => "ُيتزحزح",
+//                        "options" => ["ُيثبت", "يتحرك"],
+//                        "answer" => "يتحرك",
+//                        "typeQuestion" => "اختيار",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "word" => "يبذرني",
+//                        "options" => ["يزرعني", "يحصدني"],
+//                        "answer" => "يزرعني",
+//                        "typeQuestion" => "اختيار",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                ]
+//
+//            ],//ترادف
+//            [
+//                "groupId" => Group::where("title", "المعيار اكتشاف دالالت الكلمات الجديدة من خلال الترادف والتضاد")->first()->_id,
+//                "text" => "قم بتوصيل الكلمة إلى بضدها",
+//                "branchQuestion" => [
+//                    [
+//                        "word" => "توفي",
+//                        "options" => ["وُلِد", "كبر"],
+//                        "answer" => "وُلِد",
+//                        "typeQuestion" => "اختيار",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "word" => "َ يْنُمو",
+//                        "options" => ["يَكْبر", "يتوقف"],
+//                        "answer" => "يَكْبر",
+//                        "typeQuestion" => "اختيار",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "word" => "َفكرةٌ رائعةٌ",
+//                        "options" => ["فكرةٌ جيدةٌ", "فكرةٌ قبيحةٌ"],
+//                        "answer" => "فكرةٌ قبيحةٌ",
+//                        "typeQuestion" => "اختيار",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "word" => "َتتجول",
+//                        "options" => ["تتمشى", "تتوقف"],
+//                        "answer" => "تتوقف",
+//                        "typeQuestion" => "اختيار",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                    [
+//                        "word" => "الحديثة",
+//                        "options" => ["القديمة", "الجديدة"],
+//                        "answer" => "القديمة",
+//                        "typeQuestion" => "اختيار",
+//                        "typeAnswer" => "نص",
+//                        "mark" => 10
+//                    ],
+//                ]
+//            ],//تضاد
+
         ];
         foreach ($questions as $question) {
             $mainQuestion = Question::create([
