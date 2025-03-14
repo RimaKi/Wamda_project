@@ -22,6 +22,6 @@ class TestController extends Controller
         return self::success(TestResource::collection($groups->get())) ;
     }
     public function getGroups(){
-        return Group::all()->groupBy("subject");
+        return self::success(Group::all()->groupBy("subject"));
     }
 }
