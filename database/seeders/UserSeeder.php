@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
        User::create([
                 "firstName"=>"Amal",
                 "lastName"=>"Al halabi",
-                "email"=>"amal@gmail.com",
+                "email"=>"Amal2017abbas@gmail.com",
                 "password"=>Hash::make("123123"),
                 "isMale"=>1,
                 "summary"=>"Consultant in speech pathology and learning difficulties at the Institute of Hearing and Speech",
