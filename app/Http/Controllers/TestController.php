@@ -21,7 +21,6 @@ class TestController extends Controller
     {
         $question =  Question::query()->where('groupId',$groupId)->with('branchesQuestion')->get();
         return self::success(QuestionResource::collection($question));
-//        return self::success(TestResource::collection($groups->get()));
     }
 
     public function getGroups()
