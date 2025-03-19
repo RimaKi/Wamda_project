@@ -16,7 +16,7 @@ Route::middleware("auth:sanctum")->group(function () {
     Route::get("/getExpert", [UserController::class, "getExpert"]);
 
     Route::apiResource('/children', ChildrenController::class)->only('store', 'show','index');
-    Route::apiResource('/test', TestController::class)->only('index');
+    Route::get('/test/{groupId}', [TestController::class,'index']);
     Route::get('/groups', [TestController::class,"getGroups"]);
     Route::post('/send-email/{child}', [TestController::class,"sendEmail"]);
 
