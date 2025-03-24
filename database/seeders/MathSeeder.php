@@ -199,14 +199,14 @@ class MathSeeder extends Seeder
                         'typeQuestion' => 'عرض على مستقيم الأعداد',
                         'typeAnswer' => 'مصفوفة مرتبة',
                         "mark" => 20,
-                        "options" => [12, "x", "x", 15, "x", "x"],
+                        "lineOptions" => ["12", "x", "x", "15", "x", "x"],
                         "answer" => [12, 13, 14, 15, 16, 17],
                     ],
                     [
                         'typeQuestion' => 'عرض على مستقيم الأعداد',
                         'typeAnswer' => 'مصفوفة مرتبة',
                         "mark" => 20,
-                        "options" => ["x", 5, 6, "x", "x", "x"],
+                        "lineOptions" => ["x", "5", "6", "x", "x", "x"],
                         "answer" => [4, 5, 6, 7, 8, 9],
                     ],
                 ]

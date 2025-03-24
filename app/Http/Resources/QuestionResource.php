@@ -28,7 +28,8 @@ class QuestionResource extends JsonResource
             "answer" => $this->whenNotNull($this->answer),
             "typeQuestion" => $this->whenNotNull($this->typeQuestion),
             "typeAnswer" => $this->whenNotNull($this->typeAnswer),
-            "mark" => $this->whenNotNull($this->mark)
+            "mark" => $this->whenNotNull($this->mark),
+            "lineOptions" => $this->whenNotNull($this->lineOptions),
         ];
     }
 }
