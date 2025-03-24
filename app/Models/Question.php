@@ -22,4 +22,8 @@ class Question extends Model
         return $this->belongsTo(Group::class,"groupId","_id");
     }
 
+    public function results(){
+        return $this->hasMany(Result::class,'questionId','_id');
+    }
+
 }
