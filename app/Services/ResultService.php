@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Models\Child;
+use App\Models\Group;
 use App\Models\Question;
 use App\Models\Result;
 use Illuminate\Support\Facades\Storage;
@@ -31,7 +33,7 @@ class ResultService
             if (!$question || in_array($question->typeAnswer, ['صوت', 'صورة'])) {
                 $answer['answer'] = Storage::disk('public')->put('answers/' . $answer['childId'], $answer['answer']);
                 Result::create($answer);
-                return;
+                continue;
             }
 
             $isCorrect = match ($question->typeAnswer) {
@@ -53,6 +55,44 @@ class ResultService
         }
         $result->update(['mark' => $mark]);
         return $result;
+    }
+
+    public function testResult(Child $child)
+    {
+        $childId = $child->id; // معرف الطالب الذي تريد جلب نتائجه
+        $groups = Group::with(['questions.branchesQuestion.results' => function ($query) use ($childId) {
+            $query->where('childId', $childId);
+        }])->get();
+
+        $results = $groups->map(function ($group) {
+            $totalMark = 0;
+            $hasUncorrected = false;
+            $hasUnanswered = false;
+
+
+            foreach ($group->questions as $question) {
+                foreach ($question->branchesQuestion as $item) {
+                    $result = $item->results()->orderBy('updated_at', 'DESC')->first();
+                    if (!$result) {
+                        $hasUnanswered = true; // إذا لم يكن هناك نتيجة، فهذا يعني أن السؤال لم يُجب عليه
+                        continue;
+                    }
+                    if ($result) {
+                        if (is_null($result->mark)) {
+                            $hasUncorrected = true;
+                        } else {
+                            $totalMark += $result->mark;
+                        }
+                    }
+                }
+            }
+            return [
+                'group_title' => $group->title,
+                'subject' => $group->subject,
+                'total_mark' => $hasUnanswered ? "لم يتم الإجابة عن جميع أسئلة المعيار" : ($hasUncorrected ? "لم يتم التصحيح من قبل الخبير" : $totalMark),
+            ];
+        });
+        return $results->groupBy('subject');
     }
 
 }

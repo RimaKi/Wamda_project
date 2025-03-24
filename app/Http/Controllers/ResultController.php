@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Result\StoreRequest;
+use App\Http\Requests\Result\testResultRequest;
 use App\Http\Resources\ResultResource;
+use App\Models\Child;
+use App\Models\Group;
 use App\Models\Result;
 use App\Services\ResultService;
 
@@ -16,7 +19,7 @@ class ResultController extends Controller
     }
 
     public function store(StoreRequest $request){
-        $this->resultService->storeResult($request->validated());
+         $this->resultService->storeResult($request->validated());
         return self::success();
     }
 
@@ -29,5 +32,10 @@ class ResultController extends Controller
         $results = Result::query()->where('childId',$child)
             ->whereNull('mark')->with('question')->get();
         return self::success(ResultResource::collection($results));
+    }
+
+    public function testResult(Child $child){
+        $results = $this->resultService->testResult($child);
+        return self::success($results);
     }
 }

@@ -21,6 +21,7 @@ Route::middleware("auth:sanctum")->group(function () {
     Route::post('/send-email/{child}', [TestController::class,"sendEmail"]);
 
     Route::post('/results',[ResultController::class,'store']);
+    Route::get('/testResult/{child}',[ResultController::class,'testResult']);
 
     //expert
     Route::put('/results/{result}/{mark}',[ResultController::class,'update']);
