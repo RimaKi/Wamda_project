@@ -34,10 +34,12 @@ class Result extends Model
     }
 
     public function URLAnswer(){
-        if ($this->answer != null && Storage::disk("public")->exists($this->answer)) {
-            return Storage::disk('public')->url($this->answer);
+        if(!is_array($this->answer)){
+            if ($this->answer != null && Storage::disk("public")->exists($this->answer)) {
+                return Storage::disk('public')->url($this->answer);
+            }
         }
-        return null;
+        return $this->answer;
     }
 
 
