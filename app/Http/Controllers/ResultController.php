@@ -29,8 +29,6 @@ class ResultController extends Controller
     }
 
     public function resultsForExpert($child){
-
-        return ResultResource::collection(Result::all());
         $results = Result::query()->where('childId',$child)
             ->whereNull('mark')->with('question')->get();
         return self::success(ResultResource::collection($results));
