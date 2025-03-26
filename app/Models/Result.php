@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Storage;
 use MongoDB\Laravel\Eloquent\Model;
 
 ;
@@ -30,6 +31,13 @@ class Result extends Model
     public function child()
     {
         return $this->belongsTo(Child::class, 'childId', '_id');
+    }
+
+    public function URLAnswer(){
+        if ($this->answer != null && Storage::disk("public")->exists($this->answer)) {
+            return Storage::disk('public')->url($this->answer);
+        }
+        return null;
     }
 
 
