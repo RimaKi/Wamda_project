@@ -136,16 +136,15 @@ class ArabicSeeder extends Seeder
                 "branchQuestion" => [
                     [
                         "sentence" => "َجِديَدة",
-                        "options" => ["جِـ", "َديـ", "د", "ة", "ق", "ثق"],
-                        "answer" => ["جِـ", "َديـ", "د", "ة"],
+                        "options" => ["جِـ", "ديـ", "د", "ة", "ق", "ثق"],
+                        "answer" => ["جِـ","ديـ", "د", "ة"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
                     ],
                     [
-                        "sentence" => "مَتْجَرٌ",
-                        "options" => ["مَتْـ", "جـ", "ٌَر", "لا", "سي"],
-                        "answer" => ["مَتْـ", "جـ", "ٌَر"],
+                        "sentence" => "مَتْجَر",
+                        "answer" => ["مَتْـ", "جـ", "ر"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
                         "mark" => 5
