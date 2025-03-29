@@ -89,6 +89,7 @@ class ResultService
             return [
                 'group_title' => $group->title,
                 'subject' => $group->subject,
+                'isDifficult'=>!$hasUnanswered && !$hasUncorrected ?$totalMark < $group->minimumMark:null,
                 'total_mark' => $hasUnanswered ? "لم يتم الإجابة عن جميع أسئلة المعيار" : ($hasUncorrected ? "لم يتم التصحيح من قبل الخبير" : $totalMark),
             ];
         });
