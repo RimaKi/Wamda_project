@@ -144,6 +144,7 @@ class ArabicSeeder extends Seeder
                     ],
                     [
                         "sentence" => "مَتْجَر",
+                        "options" => ["جـ", "ديـ", "مَتْـ", "ة", "ر", "ثق"],
                         "answer" => ["مَتْـ", "جـ", "ر"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
