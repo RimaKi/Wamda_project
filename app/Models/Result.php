@@ -34,7 +34,7 @@ class Result extends Model
     }
 
     public function URLAnswer(){
-        if(!is_array($this->answer)){
+        if($this->question->typeAnswer == 'صوت'){
             if ($this->answer != null && Storage::disk("public")->exists($this->answer)) {
                 return Storage::disk('public')->url($this->answer);
             }

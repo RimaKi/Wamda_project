@@ -28,9 +28,9 @@ class ResultService
     {
         foreach ($data['answers'] as $answer) {
             $answer['childId'] = $data['childId'];
-            $question = Question::find($answer['questionId']);
+            $question = Question::findOrFail($answer['questionId']);
 
-            if (!$question || in_array($question->typeAnswer, ['صوت', 'صورة'])) {
+            if ($question->typeAnswer == 'صوت') {
                 $answer['answer'] = Storage::disk('public')->put('answers/' . $answer['childId'], $answer['answer']);
                 Result::create($answer);
                 continue;
@@ -42,7 +42,7 @@ class ResultService
                 default => (string)$question->answer == (string)$answer['answer'],
             };
 
-            $answer['mark'] = $isCorrect ? $question->mark : 0;
+            $answer['mark'] = $question->typeAnswer == 'صورة' ? null : ($isCorrect ? $question->mark : 0);
             Result::create($answer);
         }
 
