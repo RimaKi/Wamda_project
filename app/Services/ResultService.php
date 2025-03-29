@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Storage;
 class ResultService
 {
     //مقارنة مصفوفتين بغض النظر عن نوع العناصر
-    private function compareArrays(array $array1, array $array2, bool $strictOrder = false): bool
+    private function compareArrays(array $array1, string $answerString, bool $strictOrder = false): bool
     {
-//        $array2 = explode(";", $answerString);
+        $array2 = explode(";", $answerString);
         $collection1 = collect($array1)->map(fn($item) => (string)$item);
         $collection2 = collect($array2)->map(fn($item) => (string)$item);
 

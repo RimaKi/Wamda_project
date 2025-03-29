@@ -8,7 +8,6 @@ use App\Http\Resources\ResultResource;
 use App\Models\Child;
 use App\Models\Result;
 use App\Services\ResultService;
-use Illuminate\Http\Request;
 
 class ResultController extends Controller
 {
@@ -19,9 +18,8 @@ class ResultController extends Controller
         $this->resultService = $resultService;
     }
 
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        return $request->all();
         $this->resultService->storeResult($request->validated());
         return self::success();
     }
