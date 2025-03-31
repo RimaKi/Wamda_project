@@ -32,6 +32,9 @@ class ResultController extends Controller
 
     public function resultsForExpert($child)
     {
+        if(!Child::find($child)){
+            throw new \Exception("الطفل غير موجود");
+        }
         $results = Result::query()->where('childId', $child)
             ->whereNull('mark')->with('question')->get();
         return self::success(ResultResource::collection($results));

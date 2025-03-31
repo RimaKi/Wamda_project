@@ -249,7 +249,7 @@ class MathSeeder extends Seeder
                         'typeQuestion' => 'عرض الأعداد',
                         'typeAnswer' => 'صوت',
                         "mark" => 100,
-                        "options" => 30
+                        "answer" => 30
                     ],
                 ]
             ],
