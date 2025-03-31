@@ -20,7 +20,12 @@ class ChildrenController extends Controller
 
     public function index()
     {
-        $children = auth()->user()->children;
+        $user = auth()->user();
+
+        $children = match ($user->role){
+            'expert'=> Child::all(),
+            default => $user->children
+        };
         return self::success(ChildResource::collection($children));
     }
 
