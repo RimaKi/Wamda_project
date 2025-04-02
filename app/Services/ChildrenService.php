@@ -28,7 +28,7 @@ class ChildrenService
             return $allBranchQuestions->diff($answeredBranchQuestions)->isEmpty();
 
         });
-        $isFinished = Group::all()->count() === $answeredGroups->count();
+        $isFinished = Group::all()->count() == $fullyAnsweredGroups->count();
         return [
             'child' => new ChildResource($child),
             'answered_groups' => GroupResource::collection($fullyAnsweredGroups),
