@@ -9,15 +9,14 @@ use App\Models\Group;
 
 class ChildrenService
 {
-    public function showChild(Child $child){
+    public function showChild(Child $child)
+    {
         $answeredGroups = $child->results->pluck('question.mainQuestion.group')->unique();
-
         $fullyAnsweredGroups = $answeredGroups->filter(function ($group) use ($child) {
-            if (!$group) return false;
+            if (!$group) return 'false';
 
-            $mainQuestions = $group->questions()->pluck('_id');
-
-            $allBranchQuestions = \App\Models\Question::whereIn('mainQuestionId', $mainQuestions)->pluck('_id');
+            $mainQuestions = $group->questions->pluck('_id');
+            $allBranchQuestions = \App\Models\Question::whereIn('mainQuestionId', $mainQuestions)->get()->pluck('_id');
 
             // جميع الأسئلة التي أجاب عنها الطفل في هذه المجموعة (الأسئلة الفرعية فقط)
             $answeredBranchQuestions = $child->results()
@@ -27,12 +26,13 @@ class ChildrenService
 
             // التحقق مما إذا كان الطفل أجاب عن جميع الأسئلة الفرعية في هذه المجموعة
             return $allBranchQuestions->diff($answeredBranchQuestions)->isEmpty();
+
         });
         $isFinished = Group::all()->count() === $answeredGroups->count();
         return [
             'child' => new ChildResource($child),
-            'answered_groups' => GroupResource::collection($answeredGroups),
-            'isFinished'=>$isFinished
+            'answered_groups' => GroupResource::collection($fullyAnsweredGroups),
+            'isFinished' => $isFinished
         ];
     }
 
