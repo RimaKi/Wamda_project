@@ -20,6 +20,7 @@ class ResultResource extends JsonResource
             "childId" => $this->childId,
             "answer" => $this->URLAnswer(),
             "mark" => $this->mark,
+            "group" => $this->whenLoaded('question')->mainQuestion->group->title,
             "question" => $this->whenLoaded('question'),
             "child" => new ChildResource($this->whenLoaded('child')),
         ];
