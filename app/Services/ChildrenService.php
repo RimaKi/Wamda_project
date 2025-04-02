@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Http\Resources\ChildResource;
 use App\Http\Resources\GroupResource;
 use App\Models\Child;
+use App\Models\Group;
 
 class ChildrenService
 {
@@ -27,9 +28,11 @@ class ChildrenService
             // التحقق مما إذا كان الطفل أجاب عن جميع الأسئلة الفرعية في هذه المجموعة
             return $allBranchQuestions->diff($answeredBranchQuestions)->isEmpty();
         });
+        $isFinished = Group::all()->count() === $answeredGroups->count();
         return [
             'child' => new ChildResource($child),
-            'answered_groups' => GroupResource::collection($answeredGroups)
+            'answered_groups' => GroupResource::collection($answeredGroups),
+            'isFinished'=>$isFinished
         ];
     }
 
