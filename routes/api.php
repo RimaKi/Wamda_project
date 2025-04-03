@@ -28,6 +28,3 @@ Route::middleware("auth:sanctum")->group(function () {
     Route::get('/results-for-expert/{child}',[ResultController::class,'resultsForExpert']);
 
 });
-
-//Route::get('/test',function (){
-//});
