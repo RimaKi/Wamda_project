@@ -27,7 +27,7 @@ class ChildrenService
             // التحقق مما إذا كان الطفل أجاب عن جميع الأسئلة الفرعية في هذه المجموعة
             return $allBranchQuestions->diff($answeredBranchQuestions)->isEmpty();
 
-        });
+        })->unique();
         $isFinished = Group::all()->count() == $fullyAnsweredGroups->count();
         return [
             'child' => new ChildResource($child),
