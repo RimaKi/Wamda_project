@@ -39,4 +39,9 @@ class ChildrenController extends Controller
         $child->update($request->validated());
         return self::success(null, "updated successfully");
     }
+
+    public function destroy(Child $child){
+        $child->delete();
+        return self::success(null,'deleted successfully');
+    }
 }
