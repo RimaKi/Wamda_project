@@ -7,7 +7,7 @@
 <body>
 
 <div class="message">
-    <p>عزيزي المختص </p>
+    <p style="font-size: medium ">عزيزي المختص </p>
     <p> الطفل انهى امتحانه يرجى مراجعة حسابك {{$email["name"]}}</p>
 </div>
 

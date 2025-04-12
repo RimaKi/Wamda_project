@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Children;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Request;
 
 class StoreRequest extends FormRequest
 {
@@ -21,10 +22,16 @@ class StoreRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        return
+ Request::method() == "POST" ? [
             'name' => ['required', 'string'],
             'birthday' => ['required', 'date'],
             'isMale' => ['required', 'boolean']
-        ];
+        ] :
+            [
+                'name' => ['string'],
+                'birthday' => ['date'],
+                'isMale' => ['boolean']
+            ];
     }
 }

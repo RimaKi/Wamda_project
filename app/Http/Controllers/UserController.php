@@ -59,4 +59,9 @@ class UserController extends Controller
     {
         return self::success(new UserResource(User::where("role", "expert")->first()));
     }
+    public function edit(RegisterRequest $request)
+    {
+        \auth()->user()->update($request->validated());
+        return self::success(new UserResource(\auth()->user()->load('children')));
+    }
 }

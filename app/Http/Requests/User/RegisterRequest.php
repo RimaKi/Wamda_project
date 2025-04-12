@@ -3,6 +3,7 @@
 namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Request;
 
 class RegisterRequest extends FormRequest
 {
@@ -21,7 +22,8 @@ class RegisterRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        return Request::method() == 'POST' ?
+        [
             "firstName"=>["required","string"],
             "lastName"=>["required","string"],
             "email"=>["required","string","email","unique:email,users"],
@@ -29,6 +31,13 @@ class RegisterRequest extends FormRequest
             "phone"=>["required","string"],
             "address"=>["required","string"],
             "isMale"=>["required","boolean"],
-        ];
+        ]:[
+                "firstName"=>["string"],
+                "lastName"=>["string"],
+                "email"=>["string","email","unique:email,users"],
+                "phone"=>["string"],
+                "address"=>["string"],
+                "isMale"=>["boolean"],
+            ];
     }
 }
