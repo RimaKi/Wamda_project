@@ -38,15 +38,11 @@ class TestController extends Controller
         ]));
         return self::success();
     }
-    public function sendEmailToParent(SendEmailRequest $request)
+    public function sendEmailToParent(Child $child)
     {
-        $data=$request->validated();
-        $parent=User::query()->where("id", $data["parentId"])->firstorFail();
-        if(!$parent->children()->where('_id', $data["childId"])->exists()){
-            throw new \Exception("there are wrong parent email");
-        }
+        $parent=$child->parent;
         Mail::to($parent->email)->send(new SendEmailToParentRequest([
-            'childName' => Child::where("_id", $data["childId"])->first()->name,
+            'childName' => Child::where("_id", $child->_id)->first()->name,
             "parent" => $parent,
         ]));
         return self::success();

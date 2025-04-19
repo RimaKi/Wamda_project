@@ -24,7 +24,7 @@ Route::middleware("auth:sanctum")->group(function () {
     Route::get('/test/{groupId}', [TestController::class,'index']);
     Route::get('/groups', [TestController::class,"getGroups"]);
     Route::post('/send-email/{child}', [TestController::class,"sendEmail"]);
-    Route::post('/send-email-to-parent', [TestController::class,"sendEmailToParent"]);
+    Route::post('/send-email-to-parent/{child}', [TestController::class,"sendEmailToParent"]);
 
     Route::post('/results',[ResultController::class,'store']);
     Route::get('/testResult/{child}',[ResultController::class,'testResult']);
