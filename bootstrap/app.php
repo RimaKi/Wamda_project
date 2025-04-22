@@ -12,7 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias([
+            'expert' => \App\Http\Middleware\ExpertRoleMiddleware::class
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         \App\Exceptions\CustomHandler::init($exceptions);

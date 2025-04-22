@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 class ResultService
 {
     //مقارنة مصفوفتين بغض النظر عن نوع العناصر
-    private function compareArrays(array $array1, string $answerString, bool $strictOrder = false): bool
+    protected function compareArrays(array $array1, string $answerString, bool $strictOrder = false): bool
     {
         $array2 = explode(";", $answerString);
         $collection1 = collect($array1)->map(fn($item) => (string)$item);
@@ -23,7 +23,6 @@ class ResultService
             && $collection1->diff($collection2)->isEmpty()
             && $collection2->diff($collection1)->isEmpty();
     }
-
 
     public function storeResult(array $data)
     {

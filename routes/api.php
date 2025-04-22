@@ -24,15 +24,22 @@ Route::middleware("auth:sanctum")->group(function () {
     Route::get('/test/{groupId}', [TestController::class,'index']);
     Route::get('/groups', [TestController::class,"getGroups"]);
     Route::post('/send-email/{child}', [TestController::class,"sendEmail"]);
-    Route::post('/send-email-to-parent/{child}', [TestController::class,"sendEmailToParent"]);
 
     Route::post('/results',[ResultController::class,'store']);
     Route::get('/testResult/{child}',[ResultController::class,'testResult']);
 
-    //expert
-    Route::put('/results/{result}/{mark}',[ResultController::class,'update']);
-    Route::get('/results-for-expert/{child}',[ResultController::class,'resultsForExpert']);
-
     Route::post('/send-email-to-support',[UserController::class,'sendEmailToSupport']);
+
+
+    //expert
+    Route::middleware('expert')->group(function (){
+        Route::put('/results/{result}/{mark}',[ResultController::class,'update']);
+        Route::get('/results-for-expert/{child}',[ResultController::class,'resultsForExpert']);
+        Route::post('/send-email-to-parent/{child}', [TestController::class,"sendEmailToParent"]);
+
+    });
+
+
+
 
 });
