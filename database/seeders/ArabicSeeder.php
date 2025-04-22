@@ -110,7 +110,7 @@ class ArabicSeeder extends Seeder
                         "answer" => ["ابتعد", "الخروف", "عن", "القطيع"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
-                        "mark" => 5
+                        "mark" => 10
                     ],
                     [
                         "sentence" => "شاَهد الغراب الصغير نسرا",
@@ -118,7 +118,7 @@ class ArabicSeeder extends Seeder
                         "answer" => ["شاَهد", "الغراب", "الصغير", "نسرا"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
-                        "mark" => 5
+                        "mark" => 10
                     ],
                     [
                         "sentence" => "زارت المعلمة أم أحلام",
@@ -126,7 +126,7 @@ class ArabicSeeder extends Seeder
                         "answer" => ["زارت", "المعلمة", "أم", "أحلام"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
-                        "mark" => 5
+                        "mark" => 10
                     ],
                 ]
             ], //تحليل جمل
@@ -140,7 +140,7 @@ class ArabicSeeder extends Seeder
                         "answer" => ["جِـ","ديـ", "د", "ة"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
-                        "mark" => 5
+                        "mark" => 10
                     ],
                     [
                         "sentence" => "مَتْجَر",
@@ -148,7 +148,7 @@ class ArabicSeeder extends Seeder
                         "answer" => ["مَتْـ", "جـ", "ر"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
-                        "mark" => 5
+                        "mark" => 10
                     ],
                     [
                         "sentence" => "صندوق",
@@ -156,7 +156,7 @@ class ArabicSeeder extends Seeder
                         "answer" => ["صنـ", "دو", "ق"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
-                        "mark" => 5
+                        "mark" => 10
                     ],
                 ]
             ],//تحليل كلمات
@@ -170,7 +170,7 @@ class ArabicSeeder extends Seeder
                         "answer" => ["يـْ", "لـَ"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
-                        "mark" => 5
+                        "mark" => 10
                     ],
                     [
                         "sentence" => "هُو",
@@ -178,7 +178,7 @@ class ArabicSeeder extends Seeder
                         "answer" => ["هـُ", "و"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
-                        "mark" => 5
+                        "mark" => 10
                     ],
                     [
                         "sentence" => "تِمْـ",
@@ -186,7 +186,7 @@ class ArabicSeeder extends Seeder
                         "answer" => ["تـِ", "مـ"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
-                        "mark" => 5
+                        "mark" => 10
                     ],
                     [
                         "sentence" => "غِيـ",
@@ -194,7 +194,7 @@ class ArabicSeeder extends Seeder
                         "answer" => ["غـِ", "يـ"],
                         "typeQuestion" => "تحليل",
                         "typeAnswer" => "مصفوفة مرتبة",
-                        "mark" => 5
+                        "mark" => 10
                     ],
                 ]
             ],//تحليل المقاطع
@@ -425,31 +425,31 @@ class ArabicSeeder extends Seeder
                         "sentence" => "َرِحْلَة",
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
-                        "mark" => 5
+                        "mark" => 20
                     ],
                     [
                         "sentence" => "زَيْت",
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
-                        "mark" => 5
+                        "mark" => 20
                     ],
                     [
                         "sentence" => "أَخَذَه",
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
-                        "mark" => 5
+                        "mark" => 20
                     ],
                     [
                         "sentence" => "بَارَكَت",
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
-                        "mark" => 5
+                        "mark" => 20
                     ],
                     [
                         "sentence" => "صُورَة",
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
-                        "mark" => 5
+                        "mark" => 20
                     ],
                 ]
 
@@ -501,31 +501,25 @@ class ArabicSeeder extends Seeder
                         "sentence" => "ماكرٌ",
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
-                        "mark" => 5
-                    ],
-                    [
-                        "sentence" => "ماكرٌ",
-                        "typeQuestion" => "كتابي",
-                        "typeAnswer" => "صورة",
-                        "mark" => 5
+                        "mark" => 25
                     ],
                     [
                         "sentence" => "مُجْتَمِعَةً",
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
-                        "mark" => 5
+                        "mark" => 25
                     ],
                     [
                         "sentence" => "صبرٍ",
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
-                        "mark" => 5
+                        "mark" => 25
                     ],
                     [
                         "sentence" => "سلامٍ",
                         "typeQuestion" => "كتابي",
                         "typeAnswer" => "صورة",
-                        "mark" => 5
+                        "mark" => 25
                     ],
                 ]
 

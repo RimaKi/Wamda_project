@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\Use\SendEmailToSupportRequest;
 use App\Http\Requests\User\RegisterRequest;
 use App\Http\Requests\User\UserRequest;
 use App\Http\Resources\UserResource;
+use App\Mail\SendEmailToSupport;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 
 class UserController extends Controller
@@ -63,5 +66,10 @@ class UserController extends Controller
     {
         \auth()->user()->update($request->validated());
         return self::success(new UserResource(\auth()->user()->load('children')));
+    }
+
+    public function sendEmailToSupport(SendEmailToSupportRequest $request){;
+        Mail::to('ehdidgd@gmail.com')->send(new SendEmailToSupport($request->only('message')));
+        return self::success(null,'Email sent successfully');
     }
 }

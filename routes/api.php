@@ -33,4 +33,6 @@ Route::middleware("auth:sanctum")->group(function () {
     Route::put('/results/{result}/{mark}',[ResultController::class,'update']);
     Route::get('/results-for-expert/{child}',[ResultController::class,'resultsForExpert']);
 
+    Route::post('/send-email-to-support',[UserController::class,'sendEmailToSupport']);
+
 });
