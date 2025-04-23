@@ -13,6 +13,8 @@ Route::post("/register", [UserController::class, "register"]);
 Route::post("/send-reset-password-email", [ResetPasswordController::class, "sentResetPasswordLink"]);
 Route::post("/reset-password", [ResetPasswordController::class, "reset"]);
 
+Route::post('/send-email-to-support',[UserController::class,'sendEmailToSupport']);
+
 Route::middleware("auth:sanctum")->group(function () {
     Route::post("/logout", [UserController::class, "logout"]);
     Route::get("/profile", [UserController::class, "profile"]);
@@ -28,7 +30,6 @@ Route::middleware("auth:sanctum")->group(function () {
     Route::post('/results',[ResultController::class,'store']);
     Route::get('/testResult/{child}',[ResultController::class,'testResult']);
 
-    Route::post('/send-email-to-support',[UserController::class,'sendEmailToSupport']);
 
 
     //expert
@@ -38,8 +39,5 @@ Route::middleware("auth:sanctum")->group(function () {
         Route::post('/send-email-to-parent/{child}', [TestController::class,"sendEmailToParent"]);
 
     });
-
-
-
 
 });

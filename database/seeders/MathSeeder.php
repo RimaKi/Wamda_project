@@ -226,7 +226,7 @@ class MathSeeder extends Seeder
                         'typeQuestion' => 'عرض الخيارات',
                         'typeAnswer' => 'مصفوفة مرتبة',
                         "mark" => 20,
-                        "options" => [60, 11, 23, 60, 19, 70,],
+                        "options" => [30, 11, 23, 60, 19, 70],
                         "answer" => [11, 19, 23, 30, 60, 70],
                     ],
                     [
