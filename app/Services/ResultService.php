@@ -60,11 +60,10 @@ class ResultService
     public function testResult(Child $child)
     {
         $childId = $child->id; // معرف الطالب الذي تريد جلب نتائجه
-        $groups = Group::with(['questions.branchesQuestion.results' => function ($query) use ($childId) {
-            $query->where('childId', $childId);
-        }])->get();
 
-        $results = $groups->map(function ($group) {
+        $groups = Group::all();
+
+        $results = $groups->map(function ($group) use($childId) {
             $totalMark = 0;
             $hasUncorrected = false;
             $hasUnanswered = false;
@@ -72,7 +71,7 @@ class ResultService
 
             foreach ($group->questions as $question) {
                 foreach ($question->branchesQuestion as $item) {
-                    $result = $item->results()->orderBy('updated_at', 'DESC')->first();
+                    $result = $item->results()->where('childId', $childId)->orderBy('updated_at', 'DESC')->first();
                     if (!$result) {
                         $hasUnanswered = true; // إذا لم يكن هناك نتيجة، فهذا يعني أن السؤال لم يُجب عليه
                         continue;
