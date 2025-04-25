@@ -33,7 +33,7 @@ class ResetPasswordService
     {
         $reset = DB::table('password_reset_tokens')->where("email", $data['email'])->firstOrFail();
         if (!Hash::check($data['token'], $reset->token)) {
-            return "خطأ في الكود";
+           throw  new \Exception("كود التحقق غير صحيح");
         }
         $user = User::where('email', $data['email'])->firstOrFail();
         $user->password = Hash::make($data['password']);
