@@ -4,6 +4,7 @@ namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Validation\Rules\Password;
 
 class RegisterRequest extends FormRequest
 {
@@ -23,21 +24,24 @@ class RegisterRequest extends FormRequest
     public function rules(): array
     {
         return Request::method() == 'POST' ?
-        [
-            "firstName"=>["required","string"],
-            "lastName"=>["required","string"],
-            "email"=>["required","string","email","unique:email,users"],
-            "password"=>["required","string",'confirmed','min:8'],
-            "phone"=>["required","string"],
-            "address"=>["required","string"],
-            "isMale"=>["required","boolean"],
-        ]:[
-                "firstName"=>["string"],
-                "lastName"=>["string"],
-                "email"=>["string","email","unique:email,users"],
-                "phone"=>["string"],
-                "address"=>["string"],
-                "isMale"=>["boolean"],
+            [
+                "firstName" => ["required", "string"],
+                "lastName" => ["required", "string"],
+                "email" => ["required","email", "unique:users,email"],
+                "password" => ["required", 'confirmed', Password::min(8)
+                    ->letters()
+                    ->numbers()
+                    ->symbols()],
+                "phone" => ["required", 'regex:/^[0-9]{10}$/'],
+                "address" => ["required", "string"],
+                "isMale" => ["required", "boolean"],
+            ] : [
+                "firstName" => ["string"],
+                "lastName" => ["string"],
+                "email" => ["email", "unique:users,email"],
+                "phone" => ['regex:/^[0-9]{10}$/'],
+                "address" => ["string"],
+                "isMale" => ["boolean"],
             ];
     }
 }

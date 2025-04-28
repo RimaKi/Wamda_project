@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ResetPassword\RestRequest;
+use App\Http\Requests\ResetPassword\SendEmailRequest;
 use App\Services\ResetPasswordService;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\Password;
 
 class ResetPasswordController extends Controller
 {
@@ -14,21 +17,13 @@ class ResetPasswordController extends Controller
         $this->resetPasswordService = $resetPasswordService;
     }
 
-    public function sentResetPasswordLink(Request $request)
+    public function sentResetPasswordLink(SendEmailRequest $request)
     {
-       $request->validate([
-            "email" => "required|email",
-        ],$request->all());
         $this->resetPasswordService->sendEmail($request->only(['email']));
         return self::success(null, "تم إرسال رابط لإعادة تعيين كلمة المرور");
     }
-    public function reset(Request $request)
+    public function reset(RestRequest $request)
     {
-       $request->validate([
-            "email" => "required|email",
-            "token" => "required|string",
-            "password" => "required|string|confirmed",
-        ]);
         $res = $this->resetPasswordService->resetPassword($request->only(['email', 'token', 'password']));
         return self::success(null, $res);
     }

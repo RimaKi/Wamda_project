@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\ResetPassword;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Password;
 
-class UserRequest extends FormRequest
+class RestRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,11 +23,12 @@ class UserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "email" => ["required", "email", 'exists:users,email'],
-            "password" => ["required", Password::min(8)
+            "email" => "required|email|exists:users,email",
+            "token" => "required|numeric|between:100000, 999999",
+            "password" => ["required","confirmed", Password::min(8)
                 ->letters()
                 ->numbers()
-                ->symbols()]
+                ->symbols()],
         ];
     }
 }
